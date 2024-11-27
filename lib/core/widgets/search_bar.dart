@@ -7,7 +7,7 @@ class CustomSearchBar extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         hintText: 'Search now...',
-        prefixIcon: Icon(Icons.search, color: appColors.textSecondary),
+        prefixIcon: Icon(Icons.search, color: AppColors.textSecondary),
         filled: true,
         fillColor: Colors.white,
         border: OutlineInputBorder(
