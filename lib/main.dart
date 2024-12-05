@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'core/theme/app_theme.dart'; // Tema do app
-import 'presentation/screens/onboarding_screen.dart'; // Tela inicial de onboarding
+import 'presentation/screens/home/onboarding_screen.dart'; // Tela inicial de onboarding
 import 'data/bmi_database.dart'; // Banco de dados para os resultados de BMI
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
@@ -31,7 +31,8 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.light, // Tema do app
       home: const OnboardingScreen(), // Tela de onboarding ou inicial
       routes: {
-        '/history': (context) => const BmiResultsScreen(), // Rota para a tela de resultados
+        '/history': (context) =>
+            const BmiResultsScreen(), // Rota para a tela de resultados
       },
     );
   }
@@ -60,11 +61,14 @@ class _BmiResultsScreenState extends State<BmiResultsScreen> {
           ),
         ],
       ),
-      body: FutureBuilder<List<Map<String, dynamic>>>( // Chama o banco de dados para recuperar resultados
+      body: FutureBuilder<List<Map<String, dynamic>>>(
+        // Chama o banco de dados para recuperar resultados
         future: BMIDatabase.instance.getResults(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator()); // Mostra o carregando enquanto espera
+            return const Center(
+                child:
+                    CircularProgressIndicator()); // Mostra o carregando enquanto espera
           } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
             return const Center(child: Text('Nenhum resultado encontrado.'));
           } else {

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../core/theme/app_colors.dart';
-import '../../data/models/bmi_model.dart';
-import '../../domain/usecases/calculate_bmi_usecase.dart';
-import '../widgets/custom_button.dart';
-import '../../core/theme/app_text_styles.dart';
-import '../../core/constants/app_constants.dart';
-import '../../data/bmi_database.dart';
-import 'bmi_history_screen.dart';  // Importando a tela de histórico
+import '../../../core/theme/app_colors.dart';
+import '../../../data/models/bmi_model.dart';
+import '../../../domain/usecases/calculate_bmi_usecase.dart';
+import '../../widgets/custom_button.dart';
+import '../../../core/theme/app_text_styles.dart';
+import '../../../core/constants/app_constants.dart';
+import '../../../data/bmi_database.dart';
+import '../history/bmi_history_screen.dart';  // Importando a tela de histórico
 
 class BMIResultScreen extends StatelessWidget {
   final BMIModel bmiModel;

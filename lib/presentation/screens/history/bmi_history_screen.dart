@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../data/bmi_database.dart'; // Importação do banco de dados
-import '../../core/theme/app_colors.dart'; // Importando AppColors para utilizar o primary
+import '../../../data/bmi_database.dart'; // Importação do banco de dados
+import '../../../core/theme/app_colors.dart'; // Importando AppColors para utilizar o primary
 
 class BMIHistoryScreen extends StatelessWidget {
   @override

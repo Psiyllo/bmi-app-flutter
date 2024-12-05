@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../core/theme/app_colors.dart';
-import '../../core/constants/app_constants.dart';
-import '../widgets/custom_button.dart';
-import '/presentation/screens/bmi_calculator_screen.dart';
+import '../../../core/theme/app_colors.dart';
+import '../../../core/constants/app_constants.dart';
+import '../../widgets/custom_button.dart';
+import '../../../presentation/screens/calculator/bmi_calculator_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
